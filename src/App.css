@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.App {
+  text-align: center;
+  background-color: rgb(255, 249, 254);
+  min-height: 100vh;
+  border: 1px solid pink;
+}
+.app__title {
+  margin-top: 2rem;
+  /* border: 1px solid black; */
+  color: rgb(21, 5, 90);
+}
+.app__underline {
+  height: 0.25rem;
+  width: 6rem;
+  background-color: rgb(201, 135, 89);
+  margin: 0.5rem auto;
+}
+
+.menu {
+  margin: 1.5rem;
+  padding: 1rem;
+  background-color: whitesmoke;
+  margin-top: 2rem;
+  border-radius: 10px;
+}
+.menu__img {
+  object-fit: cover;
+  height: 10rem;
+  border: 3px solid rgb(201, 135, 89);
+  min-width: 17rem;
+  border-radius: 5px;
+}
+.menu__heading {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu__price {
+  font-weight: 800;
+  color: rgb(201, 135, 89);
+}
+.menu__underline {
+  height: 0.05rem;
+  min-width: 10rem;
+  background-color: rgb(13, 2, 49);
+  margin: 0.5rem auto;
+}
+
+.menu__text {
+  text-align: left;
+}
+
+@media (min-width: 900px) {
+  .App__menu {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+  }
+  .menu {
+    display: flex;
+    align-items: center;
+    width: 40%;
+    margin: 1.5rem auto;
+  }
+}
+.filter {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.filter__button {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0 0.5rem;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 3px;
+  color: rgb(201, 135, 89);
+  background-color: rgb(255, 249, 254);
+  transition: transform 50ms;
+}
+.filter__button:hover {
+  background-color: rgb(201, 135, 89);
+  color: whitesmoke;
+  transform: scale(1.08);
+}
