@@ -5,6 +5,9 @@ import Menu from "./Menu";
 import Headline from "./Headline";
 import Filter from "./Filter";
 
+let cat = new Set(data.map((data) => data.category));
+let categ = ["All", ...cat];
+console.log(categ);
 function App() {
   const [menu, setMenu] = useState(data);
 
@@ -20,7 +23,7 @@ function App() {
   return (
     <div className="App">
       <Headline />
-      <Filter Filter={filterData} />
+      <Filter Filter={filterData} categ={categ} />
       <div className="App__menu">
         {menu.map((data) => {
           return <Menu {...data} key={data.id} />;
