@@ -37,35 +37,57 @@
 
 ///TABS APP******************************************************************
 
-import React from "react";
-import { useState, useEffect } from "react";
+// import React from "react";
+// import { useState, useEffect } from "react";
 
-const App = () => {
-  const [exp, setExp] = useState([]);
-  const [value, setValue] = useState(0);
-  const [isLoading, setLoading] = useState(true);
-  const url = "https://course-api.com/react-tabs-project";
-  console.log(exp);
-  useEffect(() => {
-    // axios.get(url).then((response) => setExp(response.data));
-    fetch(url)
-      .then((res) => res.json())
-      .then((data) => setExp(data));
-  }, []);
+// const App = () => {
+//   const [loading, setLoading] = useState(true);
+//   const [jobs, setJobs] = useState([]);
+//   const [value, setValue] = useState(1);
 
-  if (isLoading) {
-    return (
-      <div>
-        <h1>Hello</h1>
-      </div>
-    );
-  }
+//   const url = "https://course-api.com/react-tabs-project";
+//   console.log(jobs);
+//   const fetchJobs = async () => {
+//     const reponse = await fetch(url);
+//     const newJobs = await reponse.json();
+//     setJobs(newJobs);
+//     setLoading(false);
+//   };
+//   useEffect(() => {
+//     fetchJobs();
+//   }, []);
 
-  const { company, dates, duties, order, id, title } = exp[value];
-  return (
-    <div>
-      <h1>Hey</h1>
-    </div>
-  );
-};
-export default App;
+//   // const { dates, duties, order, id, title } = exp[value];
+//   if (loading) {
+//     return (
+//       <section className="section loading">
+//         <h1>Loading...</h1>
+//       </section>
+//     );
+//   }
+//   const { company, dates, duties, title } = jobs[value];
+//   return (
+//     <div>
+//       {jobs.map((data, index) => {
+//         return (
+//           <div>
+//             <button onClick={() => setValue(index)}>{data.company}</button>
+//           </div>
+//         );
+//       })}
+//       <h1>{company}</h1>
+//       <h2>{dates}</h2>
+//       <h3>title</h3>
+//       <>
+//         {duties.map((data, index) => {
+//           return (
+//             <div key={index}>
+//               <p>{data}</p>
+//             </div>
+//           );
+//         })}
+//       </>
+//     </div>
+//   );
+// };
+// export default App;
